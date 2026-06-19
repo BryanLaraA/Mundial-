@@ -2,7 +2,7 @@ package mundiales;
 import persona.Persona;
 
 public class Mundial {
-    
+   private String nombre;
    private double año;
    private String pais;
 
