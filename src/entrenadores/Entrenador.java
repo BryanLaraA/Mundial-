@@ -12,29 +12,11 @@ package entrenadores;
 import java.time.LocalDate;
 import persona.Persona;
 
-
-
 public class Entrenador extends Persona {
 protected int añosExperiencia; 
- 
-    public Entrenador(String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
-        super(nombre, nacionalidad, fechanacimiento, edad);
-    }
 
     public int getAñosExperiencia() {
         return añosExperiencia;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-
-    public LocalDate getFechadenacimiento() {
-        return fechadenacimiento;
     }
 
     public void setAñosExperiencia(int añosExperiencia) {
@@ -45,9 +27,9 @@ protected int añosExperiencia;
         this.nombre = nombre;
     }
 
-    public void setEdad(int edad) {
+  public void setEdad(int edad) {
         this.edad = edad;
-    }
+    }  
 
     public Entrenador(int añosExperiencia, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
         super(nombre, nacionalidad, fechanacimiento, edad);
