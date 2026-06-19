@@ -1,11 +1,12 @@
 package selecciones;
-import jugadores.jugador;
+import jugadores.Jugador;
 import entrenadores.Entrenador;
+import java.util.Arrays;
 public class Seleccion {
     private String nombre;
     private Grupos grupo;
     private Entrenador entrenador;
-    private jugador jugadores[];
+    private Jugador jugadores[];
     public String getNombre() {
         return nombre;
     }
@@ -15,7 +16,7 @@ public class Seleccion {
     public Entrenador getEntrenador() {
         return entrenador;
     }
-    public jugador[] getJugadores() {
+    public Jugador[] getJugadores() {
         return jugadores;
     }
     public void setGrupo(Grupos grupo) {
@@ -24,20 +25,18 @@ public class Seleccion {
     public void setEntrenador(Entrenador entrenador) {
         this.entrenador = entrenador;
     }
-
-    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, jugador[] jugadores) {
+    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, Jugador[] jugadores) {
         this.nombre = nombre;
         this.grupo = grupo;
         this.entrenador = entrenador;
         this.jugadores = jugadores;
     }
-    
-    public void deleteJugadores(jugador jugador){
+    public void deleteJugadores(Jugador jugador){
         while(true){
             
         }
     }
-    public void addJugadores(jugador jugador){
+    public void addJugadores(Jugador jugador){
         this.jugadores[buscarVacio()]=jugador;
     }
     public int buscarVacio(){
@@ -49,12 +48,16 @@ public class Seleccion {
             i++;
         }      
     }
-    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, jugador jugado) {
+    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, Jugador jugado) {
         this.nombre = nombre;
         this.grupo = grupo;
     }
     @Override
     public String toString() {
-        return "Seleccion: " + "\nnombre: " + nombre + "\ngrupo=" + grupo + "\nentrenador=" + entrenador + "\njugadores=" + jugadores;
+        return "Seleccion: " + 
+                "\nnombre: " + nombre + 
+                "\ngrupo=" + grupo + 
+                "\nentrenador=" + entrenador + 
+                "\njugadores=" + Arrays.toString(jugadores);
     }
 }
