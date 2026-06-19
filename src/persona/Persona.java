@@ -4,7 +4,7 @@ package persona;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Persona {
+public abstract class Persona {
     protected String nombre;
     protected String nacionalidad;
     protected LocalDate fechadenacimiento;
@@ -27,19 +27,17 @@ public class Persona {
     }
     
 
-    public Persona(String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
+    public Persona(String nombre, String nacionalidad, LocalDate fechanacimiento) {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
         this.fechadenacimiento = fechanacimiento;
-        this.edad = edad;
     }
 
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre 
                 + ", nacionalidad=" + nacionalidad 
-                + ", fecha=" + fechadenacimiento + ", edad=" 
-                + edad + '}';
+                + ", fecha=" + fechadenacimiento;
     }
     
     
