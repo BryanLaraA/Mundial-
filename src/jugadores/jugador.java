@@ -16,11 +16,12 @@ public class Jugador extends Persona {
     protected int numero;
     protected String posicion;
 
-    public Jugador(String nombre, String nacionalidad, String fecha, int numero, String posicion) {
-        super(nombre, nacionalidad, fechadenacimiento);
-        this.numero = numero;
-        this.posicion = posicion;
-                
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getPosicion() {
+        return posicion;
     }
 
     public void mosInformacion() {
@@ -28,30 +29,13 @@ public class Jugador extends Persona {
         System.out.println("Nacionalidad: " + nacionalidad);
         System.out.println("Fecha: " + fechadenacimiento);
         System.out.println("Numero: " + numero);
-        System.out.println("Posición: " + posicion);
+        System.out.println("Posicion: " + posicion);
     }
 
-    @Override
-    public String getNombre() {
-        return nombre;
-    }
-
-    @Override
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-
-    @Override
-    public LocalDate getFechadenacimiento() {
-        return fechadenacimiento;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public String getPosicion() {
-        return posicion;
+    public Jugador(int numero, String posicion, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
+        super(nombre, nacionalidad, fechanacimiento, edad);
+        this.numero = numero;
+        this.posicion = posicion;
     }
 
     @Override

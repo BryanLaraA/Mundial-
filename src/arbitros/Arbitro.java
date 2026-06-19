@@ -13,17 +13,16 @@ import persona.Persona;
  */
 public class Arbitro extends Persona {
 
-    private final String categoria;
-
-    public Arbitro(String nombre, String nacionalidad, String fechadenacimiento, String categoria) {
-        super(nombre, nacionalidad, fechadenacimiento);
+    public Arbitro(String categoria, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
+        super(nombre, nacionalidad, fechanacimiento, edad);
         this.categoria = categoria;
     }
+
+    private final String categoria;
 
     public String getCategoria() {
         return categoria;
     }
-    
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -40,15 +39,13 @@ public class Arbitro extends Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
-    
 
     public void mostrarInfo() {
         System.out.println("Arbitro");
         System.out.println("Nombre: " + nombre);
         System.out.println("Nacionalidad: " + nacionalidad);
         System.out.println("Fecha: " + fechadenacimiento);
-        System.out.println("Categoría: " + categoria);
+        System.out.println("Categoria: " + categoria);
     }
 
     @Override
