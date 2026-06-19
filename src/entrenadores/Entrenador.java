@@ -32,7 +32,7 @@ protected int añosExperiencia;
     }  
 
     public Entrenador(int añosExperiencia, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
-        super(nombre, nacionalidad, fechanacimiento, edad);
+        super(nombre, nacionalidad, fechanacimiento);
         this.añosExperiencia = añosExperiencia;
     }
 
