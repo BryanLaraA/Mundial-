@@ -32,11 +32,12 @@ public class Jugador extends Persona {
         System.out.println("Posicion: " + posicion);
     }
 
-    public Jugador(int numero, String posicion, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
-        super(nombre, nacionalidad, fechanacimiento, edad);
+    public Jugador(int numero, String posicion, String nombre, String nacionalidad, LocalDate fechanacimiento) {
+        super(nombre, nacionalidad, fechanacimiento);
         this.numero = numero;
         this.posicion = posicion;
     }
+
 
     @Override
     public String toString() {

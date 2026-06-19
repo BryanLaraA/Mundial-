@@ -13,10 +13,12 @@ import persona.Persona;
  */
 public class Arbitro extends Persona {
 
-    public Arbitro(String categoria, String nombre, String nacionalidad, LocalDate fechanacimiento, int edad) {
-        super(nombre, nacionalidad, fechanacimiento, edad);
+    public Arbitro(String categoria, String nombre, String nacionalidad, LocalDate fechanacimiento) {
+        super(nombre, nacionalidad, fechanacimiento);
         this.categoria = categoria;
     }
+
+    
 
     private final String categoria;
 
