@@ -5,83 +5,55 @@
 package partidos;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
-
 /**
  *
  * @author Isaac
  */
 public class Partido {
-    private String Equipolocal;
-    private String EquipoVisitante;
-    private LocalDate fechaPartido;
-    private LocalTime horaPartido;
-    private String ubicacion; 
-    private int marcadorz;
-    private int marcadorLocal;
-    private int marcadorVisitante;
+    protected String nombre; 
+    protected LocalDate año;
+    protected String pais; 
 
-    public String getEquipolocal() {
-        return Equipolocal;
+    public String getNombre() {
+        return nombre;
     }
 
-    public String getEquipoVisitante() {
-        return EquipoVisitante;
+    public LocalDate getAño() {
+        return año;
     }
 
-    public LocalDate getFechaPartido() {
-        return fechaPartido;
+    public String getPais() {
+        return pais;
     }
 
-    public LocalTime getHoraPartido() {
-        return horaPartido;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getUbicacion() {
-        return ubicacion;
+    public void setAño(LocalDate año) {
+        this.año = año;
     }
 
-    public int getMarcadorz() {
-        return marcadorz;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    public int getMarcadorLocal() {
-        return marcadorLocal;
+    public Partido(String nombre, LocalDate año, String pais) {
+        this.nombre = nombre;
+        this.año = año;
+        this.pais = pais;
     }
 
-    public int getMarcadorVisitante() {
-        return marcadorVisitante;
+    
     }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
-    }
-
-    public void setMarcadorz(int marcadorz) {
-        this.marcadorz = marcadorz;
-    }
-
-    public void setMarcadorLocal(int marcadorLocal) {
-        this.marcadorLocal = marcadorLocal;
-    }
-
-    public void setMarcadorVisitante(int marcadorVisitante) {
-        this.marcadorVisitante = marcadorVisitante;
-    }
-
-    public Partido(String Equipolocal, String EquipoVisitante, LocalDate fechaPartido, LocalTime horaPartido, String ubicacion, int marcadorz, int marcadorLocal, int marcadorVisitante) {
-        this.Equipolocal = Equipolocal;
-        this.EquipoVisitante = EquipoVisitante;
-        this.fechaPartido = fechaPartido;
-        this.horaPartido = horaPartido;
-        this.ubicacion = ubicacion;
-        this.marcadorz = marcadorz;
-        this.marcadorLocal = marcadorLocal;
-        this.marcadorVisitante = marcadorVisitante;
-    }
+    
+    
+    
+    
+    
 
 
     
     
     
-}
+
