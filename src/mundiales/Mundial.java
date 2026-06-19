@@ -1,13 +1,43 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package mundiales;
 
-/**
- *
- * @author bryan
- */
+
 public class Mundial {
+    
+    
+   private String nombre;
+   private double año;
+   private String pais;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getAño() {
+        return año;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setAño(double año) {
+        this.año = año;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public Mundial(String nombre, double año, String pais) {
+        this.nombre = nombre;
+        this.año = año;
+        this.pais = pais;
+    }
+   
     
 }
