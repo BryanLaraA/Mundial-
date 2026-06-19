@@ -4,73 +4,58 @@
  */
 package jugadores;
 
+import java.time.LocalDate;
+import persona.Persona;
+
 /**
  *
  * @author Student
  */
+public class Jugador extends Persona {
 
-public class jugador {
-    private String nombre;
-    private int edad;
-    private String posicion;
-    private int numeroCamiseta;
-    private int goles;
+    protected int numero;
+    protected String posicion;
 
-    public jugador(String nombre, int edad, String posicion, int numeroCamiseta, int goles) {
-        this.nombre = nombre;
-        this.edad = edad;
+    public Jugador(String nombre, String nacionalidad, String fecha, int numero, String posicion) {
+        super(nombre, nacionalidad, fechadenacimiento);
+        this.numero = numero;
         this.posicion = posicion;
-        this.numeroCamiseta = numeroCamiseta;
-        this.goles = goles;
+                
     }
 
+    public void mosInformacion() {
+        System.out.println("Jugador: " + nombre);
+        System.out.println("Nacionalidad: " + nacionalidad);
+        System.out.println("Fecha: " + fechadenacimiento);
+        System.out.println("Numero: " + numero);
+        System.out.println("Posición: " + posicion);
+    }
+
+    @Override
     public String getNombre() {
         return nombre;
     }
 
-    public int getEdad() {
-        return edad;
+    @Override
+    public String getNacionalidad() {
+        return nacionalidad;
+    }
+
+    @Override
+    public LocalDate getFechadenacimiento() {
+        return fechadenacimiento;
+    }
+
+    public int getNumero() {
+        return numero;
     }
 
     public String getPosicion() {
         return posicion;
     }
 
-    public int getNumeroCamiseta() {
-        return numeroCamiseta;
-    }
-
-    public int getGoles() {
-        return goles;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public void setPosicion(String posicion) {
-        this.posicion = posicion;
-    }
-
-    public void setNumeroCamiseta(int numeroCamiseta) {
-        this.numeroCamiseta = numeroCamiseta;
-    }
-
-    public void setGoles(int goles) {
-        this.goles = goles;
-    }
-
-    public void anotarGol() {
-        this.goles++;
-    }
-
     @Override
     public String toString() {
-        return "Jugador: " + "nombre='" + nombre +", edad=" + edad +", posicion='" + posicion +", numeroCamiseta=" + numeroCamiseta +", goles=" + goles ;
+        return nombre + posicion + numero;
     }
-
 }
