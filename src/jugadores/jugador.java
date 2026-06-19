@@ -2,17 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package jugadores;
-
+package jugadores; 
 import java.time.LocalDate;
 import persona.Persona;
-
 /**
  *
  * @author Student
  */
 public class Jugador extends Persona {
-
     protected int numero;
     protected String posicion;
 
