@@ -40,12 +40,6 @@ public class Partido extends Arbitro{
         this.pais = pais;
     }
 
-    public Partido( LocalDate año, String pais, String categoria, String nombre, String nacionalidad, LocalDate fechanacimiento) {
-        super(categoria, nombre, nacionalidad, fechanacimiento);
-        this.nombre = nombre;
-        this.año = año;
-        this.pais = pais;
-    }
 
    public boolean agregarArbitro(String newArbitro) {
     for (int i = 0; i < arbitro.length; i++) {
@@ -86,6 +80,13 @@ public class Partido extends Arbitro{
         }
     }
         return contador;
+    }
+      
+        public Partido( LocalDate año, String pais, String categoria, String nombre, String nacionalidad, LocalDate fechanacimiento) {
+        super(categoria, nombre, nacionalidad, fechanacimiento);
+        this.nombre = nombre;
+        this.año = año;
+        this.pais = pais;
     }
 }
     
