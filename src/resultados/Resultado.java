@@ -9,5 +9,5 @@ package resultados;
  * @author Student
  */
 public class Resultado {
-    
+    protected int goles;
 }
