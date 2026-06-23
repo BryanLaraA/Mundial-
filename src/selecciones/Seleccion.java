@@ -1,7 +1,7 @@
 package selecciones;
 import jugadores.Jugador;
 import entrenadores.Entrenador;
-import java.util.Arrays;
+import java.util.Objects;
 public class Seleccion {
     private String nombre;
     private Grupos grupo;
@@ -32,23 +32,42 @@ public class Seleccion {
         this.jugadores = jugadores;
     }
     public void deleteJugadores(Jugador jugador){
-        while(true){
-            
+        int i;
+        for(i=0;i<countJugadores();i++){
+            if (jugadores[i]==jugador) {
+                
+            }
+            else {
+            }
         }
     }
     public void addJugadores(Jugador jugador){
-        this.jugadores[buscarVacio()]=jugador;
+        int espacio = buscarVacio();
+        if (espacio==-1){
+            System.out.println("No hay espacio");
+        }
+        this.jugadores[espacio]=jugador;
+        System.out.println("Jugador añadido");
+    }
+    public int countJugadores(){
+        int i;
+        for(i=0;i<jugadores.length;i++){
+            if(Objects.isNull(jugadores[i])){
+                return i+1;
+            }
+            
+        }
     }
     public int buscarVacio(){
         int i=0;
-        while(true){
+        for(i=0;i<jugadores.length;i++){
             if(jugadores[i]==null){
                 return i;
             }
-            i++;
-        }      
+        }    
+        return -1;
     }
-    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, Jugador jugado) {
+    public Seleccion(String nombre, Grupos grupo, Entrenador entrenador, Jugador jugadores) {
         this.nombre = nombre;
         this.grupo = grupo;
     }
